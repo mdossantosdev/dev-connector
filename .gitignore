@@ -1,0 +1,13 @@
+# dependency directories
+node_modules/
+
+# build directory
+build/
+Build/
+
+# dotenv environment variables file
+.env
+
+# misc
+.DS_Store
+Thumbs.db
