@@ -11,7 +11,7 @@ export const Nav = styled.nav`
   z-index: 1;
   width: 100%;
   top: 0;
-  border-bottom: solid 0.1rem #17a2b8;
+  border-bottom: solid 1px #17a2b8;
   opacity: 0.9;
 `;
 
@@ -21,13 +21,13 @@ export const NavSection = styled.div`
 `;
 
 export const Title = styled.h1`
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   font-weight: 300;
   margin-left: 1rem;
 `;
 
 export const Icon = styled.div`
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   cursor: pointer;
 `;
 
@@ -40,7 +40,7 @@ export const NavItem = styled.a`
   padding: 0.45rem;
   margin: 0 0.25rem;
 
-  :hover {
+  &:hover {
     color: #17a2b8;
   }
 `;
