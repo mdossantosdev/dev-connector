@@ -21,8 +21,8 @@ const Landing = () => {
             developers
           </Text>
           <BtnWrapper>
-            <BtnRegister>Register</BtnRegister>
-            <BtnLogin>Login</BtnLogin>
+            <BtnRegister to='/register'>Register</BtnRegister>
+            <BtnLogin to='/login'>Login</BtnLogin>
           </BtnWrapper>
         </LandingInner>
       </DarkOverlay>

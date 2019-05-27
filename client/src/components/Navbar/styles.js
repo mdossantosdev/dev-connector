@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const Nav = styled.nav`
   display: flex;
@@ -27,18 +28,17 @@ export const Title = styled.h1`
 `;
 
 export const Icon = styled.div`
-  font-size: 1.6rem;
-  cursor: pointer;
+  font-size: 1.5rem;
 `;
 
 export const NavItemWrapper = styled.ul`
   display: flex;
 `;
 
-export const NavItem = styled.a`
+export const NavItem = styled(Link)`
+  display: flex;
   color: #fff;
-  padding: 0.45rem;
-  margin: 0 0.25rem;
+  margin: 0 0.5rem;
 
   &:hover {
     color: #17a2b8;

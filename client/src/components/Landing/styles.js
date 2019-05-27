@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 import background from '../../images/showcase.jpg';
 
 export const LandingWrapper = styled.section`
@@ -43,7 +44,7 @@ export const BtnWrapper = styled.div`
   display: flex;
 `;
 
-export const BtnRegister = styled.div`
+export const BtnRegister = styled(Link)`
   background-color: #17a2b8;
   color: #fff;
   width: 6rem;
@@ -51,21 +52,19 @@ export const BtnRegister = styled.div`
   font-size: 1rem;
   margin-right: 0.5rem;
   transition: opacity 0.2s ease-in;
-  cursor: pointer;
 
   &:hover {
     opacity: 0.8;
   }
 `;
 
-export const BtnLogin = styled.div`
+export const BtnLogin = styled(Link)`
   background-color: #f4f4f4;
   color: #333;
   width: 6rem;
   padding: 0.4rem 0;
   font-size: 1rem;
   transition: opacity 0.2s ease-in;
-  cursor: pointer;
 
   &:hover {
     opacity: 0.8;
