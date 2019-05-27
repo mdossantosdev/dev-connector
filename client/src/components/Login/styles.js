@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const RegisterWrapper = styled.div`
+export const LoginWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -40,14 +40,7 @@ export const Input = styled.input`
   }
 `;
 
-export const SmallText = styled.small`
-  display: block;
-  padding: 0 0.2rem;
-  margin-top: 0.3rem;
-  color: #888;
-`;
-
-export const BtnRegister = styled.input`
+export const BtnLogin = styled.input`
   background-color: #17a2b8;
   color: #fff;
   font-size: 1rem;

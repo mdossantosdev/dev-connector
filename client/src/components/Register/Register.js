@@ -80,6 +80,7 @@ const Register = () => {
               name='confirmPassword'
               value={confirmPassword}
               onChange={onChange}
+              minLength='10'
             />
           </FormGroup>
           <BtnRegister type='submit' value='Register' />
