@@ -4,6 +4,7 @@ import Navbar from '../Navbar/Navbar';
 import Landing from '../Landing/Landing';
 import Register from '../Register';
 import Login from '../Login/Login';
+import Alert from '../Alert';
 import GlobalStyle from '../../styles/globalStyles';
 import { Container } from './styles';
 
@@ -19,6 +20,7 @@ const App = () => (
         <Navbar />
         <Route exact path='/' component={Landing} />
         <Container>
+          <Alert />
           <Switch>
             <Route exact path='/register' component={Register} />
             <Route exact path='/login' component={Login} />
