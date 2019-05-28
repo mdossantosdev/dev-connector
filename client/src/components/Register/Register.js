@@ -11,7 +11,7 @@ import {
   BtnRegister,
 } from './styles';
 
-const Register = () => {
+const Register = ({ setAlert }) => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -28,7 +28,7 @@ const Register = () => {
   const onSubmit = (e) => {
     e.preventDefault();
     if (password !== confirmPassword) {
-      console.log('Passwords do not match');
+      setAlert('Passwords do not match', 'danger');
     } else {
       console.log(formData);
     }
