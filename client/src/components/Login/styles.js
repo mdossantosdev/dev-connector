@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { palette } from '../../styles/palette';
 
 export const LoginWrapper = styled.div`
   display: flex;
@@ -10,7 +11,7 @@ export const Title = styled.h1`
   font-size: 3rem;
   line-height: 1.2;
   margin-bottom: 1rem;
-  color: #17a2b8;
+  color: var(--primary-color);
 `;
 
 export const SubTitle = styled.p`
@@ -36,13 +37,13 @@ export const Input = styled.input`
   border: 1px solid #ccc;
 
   &:focus {
-    outline: 2px solid #17a2b8;
+    outline: 2px solid var(--primary-color);
   }
 `;
 
 export const BtnLogin = styled.input`
-  background-color: #17a2b8;
-  color: #fff;
+  background-color: ${palette.primary.background};
+  color: ${palette.primary.color};
   font-size: 1rem;
   width: 6rem;
   padding: 0.4rem 0;

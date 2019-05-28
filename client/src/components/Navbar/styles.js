@@ -1,18 +1,18 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import { palette } from '../../styles/palette';
 
 export const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #343a40;
-  color: #fff;
+  background: ${palette.dark.background};
   padding: 0.7rem 2rem;
   position: fixed;
   z-index: 1;
   width: 100%;
   top: 0;
-  border-bottom: solid 1px #17a2b8;
+  border-bottom: solid 1px var(--primary-color);
   opacity: 0.9;
 `;
 
@@ -37,10 +37,10 @@ export const NavItemWrapper = styled.ul`
 
 export const NavItem = styled(Link)`
   display: flex;
-  color: #fff;
+  color: ${palette.dark.color};
   margin: 0 0.5rem;
 
   &:hover {
-    color: #17a2b8;
+    color: var(--primary-color);
   }
 `;

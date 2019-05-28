@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import background from '../../images/showcase.jpg';
+import { palette } from '../../styles/palette';
 
 export const LandingWrapper = styled.section`
   position: relative;
@@ -45,8 +46,8 @@ export const BtnWrapper = styled.div`
 `;
 
 export const BtnRegister = styled(Link)`
-  background-color: #17a2b8;
-  color: #fff;
+  background-color: ${palette.primary.background};
+  color: ${palette.primary.color};
   width: 6rem;
   padding: 0.4rem 0;
   font-size: 1rem;
@@ -59,8 +60,8 @@ export const BtnRegister = styled(Link)`
 `;
 
 export const BtnLogin = styled(Link)`
-  background-color: #f4f4f4;
-  color: #333;
+  background-color: ${palette.light.background};
+  color: ${palette.light.color};
   width: 6rem;
   padding: 0.4rem 0;
   font-size: 1rem;
