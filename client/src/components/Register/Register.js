@@ -11,7 +11,7 @@ import {
   BtnRegister,
 } from './styles';
 
-const Register = ({ setAlert }) => {
+const Register = ({ setAlert, register }) => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -30,7 +30,7 @@ const Register = ({ setAlert }) => {
     if (password !== confirmPassword) {
       setAlert('Passwords do not match', 'danger');
     } else {
-      console.log(formData);
+      register({ name, email, password });
     }
   };
 
@@ -80,7 +80,6 @@ const Register = ({ setAlert }) => {
               name='confirmPassword'
               value={confirmPassword}
               onChange={onChange}
-              minLength='10'
             />
           </FormGroup>
           <BtnRegister type='submit' value='Register' />
