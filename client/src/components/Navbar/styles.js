@@ -44,3 +44,11 @@ export const NavItem = styled(Link)`
     color: var(--primary-color);
   }
 `;
+
+export const Logout = styled.a`
+  color: ${palette.dark.color};
+
+  &:hover {
+    color: var(--primary-color);
+  }
+`;

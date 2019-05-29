@@ -1,7 +1,40 @@
-import React from 'react';
-import { Nav, NavSection, Icon, Title, NavItemWrapper, NavItem } from './styles';
+import React, { Fragment } from 'react';
+import PropTypes from 'prop-types';
+import {
+  Nav,
+  NavSection,
+  Icon,
+  Title,
+  NavItemWrapper,
+  NavItem,
+  Logout,
+} from './styles';
 
-const Navbar = () => {
+const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
+  const authLinks = (
+    <NavItemWrapper>
+      <li>
+        <Logout onClick={logout} href='#!'>
+          <i className='fas fa-sign-out-alt' /> Logout
+        </Logout>
+      </li>
+    </NavItemWrapper>
+  );
+
+  const guestLinks = (
+    <NavItemWrapper>
+      <li>
+        <NavItem to='#!'>Developers</NavItem>
+      </li>
+      <li>
+        <NavItem to='/register'>Register</NavItem>
+      </li>
+      <li>
+        <NavItem to='/login'>Login</NavItem>
+      </li>
+    </NavItemWrapper>
+  );
+
   return (
     <Nav>
       <NavSection>
@@ -13,20 +46,15 @@ const Navbar = () => {
         </NavItem>
       </NavSection>
       <NavSection>
-        <NavItemWrapper>
-          <li>
-            <NavItem to='/'>Developers</NavItem>
-          </li>
-          <li>
-            <NavItem to='/register'>Register</NavItem>
-          </li>
-          <li>
-            <NavItem to='/login'>Login</NavItem>
-          </li>
-        </NavItemWrapper>
+        {!loading && <Fragment>{isAuthenticated ? authLinks : guestLinks}</Fragment>}
       </NavSection>
     </Nav>
   );
+};
+
+Navbar.propTypes = {
+  logout: PropTypes.func.isRequired,
+  auth: PropTypes.object.isRequired,
 };
 
 export default Navbar;
