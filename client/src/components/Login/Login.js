@@ -1,5 +1,6 @@
 import React, { Fragment, useState } from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import {
   LoginWrapper,
   Title,
@@ -62,6 +63,10 @@ const Login = ({ login }) => {
       </LoginWrapper>
     </Fragment>
   );
+};
+
+Login.propTypes = {
+  login: PropTypes.func.isRequired,
 };
 
 export default Login;

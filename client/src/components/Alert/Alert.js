@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { StyledAlert } from './styles';
 
 const Alert = ({ alerts }) =>
@@ -9,5 +10,9 @@ const Alert = ({ alerts }) =>
       {alert.msg}
     </StyledAlert>
   ));
+
+Alert.propTypes = {
+  alerts: PropTypes.array.isRequired,
+};
 
 export default Alert;
