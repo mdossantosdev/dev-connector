@@ -5,6 +5,8 @@ import Landing from '../Landing/Landing';
 import Register from '../Register';
 import Login from '../Login';
 import Alert from '../Alert';
+import Dashboard from '../Dashboard/Dashboard';
+import PrivateRoute from '../Routing/PrivateRoute';
 import GlobalStyle from '../../styles/globalStyles';
 import { Container } from './styles';
 
@@ -34,6 +36,7 @@ const App = () => {
             <Switch>
               <Route exact path='/register' component={Register} />
               <Route exact path='/login' component={Login} />
+              <PrivateRoute exact path='/dashboard' component={Dashboard} />
             </Switch>
           </Container>
         </Fragment>
