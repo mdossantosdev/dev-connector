@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Navbar from '../Navbar/Navbar';
 import Landing from '../Landing/Landing';
 import Register from '../Register';
-import Login from '../Login/Login';
+import Login from '../Login';
 import Alert from '../Alert';
 import GlobalStyle from '../../styles/globalStyles';
 import { Container } from './styles';

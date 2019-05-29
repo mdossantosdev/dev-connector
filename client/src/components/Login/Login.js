@@ -10,7 +10,7 @@ import {
   BtnLogin,
 } from './styles';
 
-const Login = () => {
+const Login = ({ login }) => {
   const [formData, setFormData] = useState({
     email: '',
     password: '',
@@ -24,7 +24,7 @@ const Login = () => {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    console.log(formData);
+    login(email, password);
   };
 
   return (
