@@ -7,6 +7,11 @@ const GlobalStyle = createGlobalStyle`
     --light-color: #f4f4f4;
     --danger-color: #dc3545;
     --success-color: #28a745;
+    --twitter-color: #38a1f3;
+    --facebook-color: #3b5998;
+    --instagram-color: #c13584;
+    --youtube-color: #c4302b;
+    --linkedin-color: #0077b5;
   }
 
   * {

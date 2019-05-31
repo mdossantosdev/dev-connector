@@ -1,7 +1,7 @@
 import React, { Fragment, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import Loader from '../Loader/Loader';
-import { Title, SubTitle } from './styles';
+import { Title, SubTitle, BtnCreate } from './styles';
 
 const Dashboard = ({
   getCurrentProfile,
@@ -20,7 +20,14 @@ const Dashboard = ({
       <SubTitle>
         <i className='fas fa-user' /> Welcome {user && user.name}
       </SubTitle>
-      {profile !== null ? <Fragment>has</Fragment> : <Fragment>has not</Fragment>}
+      {profile !== null ? (
+        <Fragment>has profile</Fragment>
+      ) : (
+        <Fragment>
+          <p>You have not yet setup a profile, please add some info</p>
+          <BtnCreate to='/create-profile'>Create Profile</BtnCreate>
+        </Fragment>
+      )}
     </Fragment>
   );
 };
