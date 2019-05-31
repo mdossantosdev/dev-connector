@@ -5,7 +5,7 @@ import Landing from '../Landing/Landing';
 import Register from '../Register';
 import Login from '../Login';
 import Alert from '../Alert';
-import Dashboard from '../Dashboard/Dashboard';
+import Dashboard from '../Dashboard';
 import PrivateRoute from '../Routing/PrivateRoute';
 import GlobalStyle from '../../styles/globalStyles';
 import { Container } from './styles';
