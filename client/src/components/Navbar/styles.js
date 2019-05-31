@@ -24,10 +24,10 @@ export const NavSection = styled.div`
 export const Title = styled.h1`
   font-size: 1.5rem;
   font-weight: 300;
-  margin-left: 1rem;
+  margin-left: 0.8rem;
 `;
 
-export const Icon = styled.div`
+export const Icon = styled.i`
   font-size: 1.5rem;
 `;
 
@@ -37,12 +37,17 @@ export const NavItemWrapper = styled.ul`
 
 export const NavItem = styled(Link)`
   display: flex;
+  align-items: center;
   color: ${palette.dark.color};
-  margin: 0 0.5rem;
+  margin-right: 1rem;
 
   &:hover {
     color: var(--primary-color);
   }
+`;
+
+export const NavIcon = styled.i`
+  margin-right: 0.3rem;
 `;
 
 export const Logout = styled.a`
