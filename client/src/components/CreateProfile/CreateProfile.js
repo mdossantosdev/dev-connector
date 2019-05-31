@@ -1,4 +1,5 @@
 import React, { Fragment, useState } from 'react';
+import PropTypes from 'prop-types';
 import {
   Title,
   SubTitle,
@@ -15,7 +16,7 @@ import {
   BtnGoBack,
 } from './styles';
 
-const CreateProfile = () => {
+const CreateProfile = ({ createProfile, history }) => {
   const [formData, setFormData] = useState({
     company: '',
     website: '',
@@ -54,7 +55,7 @@ const CreateProfile = () => {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    console.log(formData);
+    createProfile(formData, history);
   };
 
   return (
@@ -119,7 +120,7 @@ const CreateProfile = () => {
             onChange={onChange}
           />
           <FormText>
-            Please use comma separated values (eg. HTML,CSS,JavaScript,Ruby)
+            Please use comma separated values (eg. HTML,CSS,JavaScript,React)
           </FormText>
         </FormGroup>
         <FormGroup>
@@ -218,6 +219,8 @@ const CreateProfile = () => {
   );
 };
 
-CreateProfile.propTypes = {};
+CreateProfile.propTypes = {
+  createProfile: PropTypes.func.isRequired,
+};
 
 export default CreateProfile;
