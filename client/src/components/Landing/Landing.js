@@ -1,4 +1,6 @@
 import React from 'react';
+import { Redirect } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import {
   LandingWrapper,
   DarkOverlay,
@@ -10,7 +12,11 @@ import {
   BtnLogin,
 } from './styles';
 
-const Landing = () => {
+const Landing = ({ isAuthenticated }) => {
+  if (isAuthenticated) {
+    return <Redirect to='/dashboard' />;
+  }
+
   return (
     <LandingWrapper>
       <DarkOverlay>
@@ -28,6 +34,10 @@ const Landing = () => {
       </DarkOverlay>
     </LandingWrapper>
   );
+};
+
+Landing.propTypes = {
+  isAuthenticated: PropTypes.bool,
 };
 
 export default Landing;
