@@ -2,6 +2,7 @@ import React, { Fragment, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import Loader from '../Loader/Loader';
 import { Title, SubTitle, BtnCreate } from './styles';
+import DashboardActions from '../DasboardActions/DashboardActions';
 
 const Dashboard = ({
   getCurrentProfile,
@@ -21,7 +22,9 @@ const Dashboard = ({
         <i className='fas fa-user' /> Welcome {user && user.name}
       </SubTitle>
       {profile !== null ? (
-        <Fragment>has profile</Fragment>
+        <Fragment>
+          <DashboardActions />
+        </Fragment>
       ) : (
         <Fragment>
           <p>You have not yet setup a profile, please add some info</p>
