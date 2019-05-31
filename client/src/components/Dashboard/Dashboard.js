@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 
-const Dashboard = ({ getCurrentProfile, auth, profile }) => {
+const Dashboard = ({ getCurrentProfile, auth, profile: { profile } }) => {
   useEffect(() => {
     getCurrentProfile();
   }, []);
