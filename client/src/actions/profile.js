@@ -56,7 +56,7 @@ export const createProfile = (formData, history, edit = false) => async (
   }
 };
 
-// Add Experience
+// Add experience
 export const addExperience = (formData, history) => async (dispatch) => {
   try {
     const config = {
@@ -89,7 +89,7 @@ export const addExperience = (formData, history) => async (dispatch) => {
   }
 };
 
-// Add Education
+// Add education
 export const addEducation = (formData, history) => async (dispatch) => {
   try {
     const config = {
@@ -133,6 +133,25 @@ export const deleteExperience = (id) => async (dispatch) => {
     });
 
     dispatch(setAlert('Experience Removed', 'success'));
+  } catch (err) {
+    dispatch({
+      type: PROFILE_ERROR,
+      payload: { msg: err.response.statusText, status: err.response.status },
+    });
+  }
+};
+
+// Delete education
+export const deleteEducation = (id) => async (dispatch) => {
+  try {
+    const res = await axios.delete(`/api/profile/education/${id}`);
+
+    dispatch({
+      type: UPDATE_PROFILE,
+      payload: res.data,
+    });
+
+    dispatch(setAlert('Education Removed', 'success'));
   } catch (err) {
     dispatch({
       type: PROFILE_ERROR,
