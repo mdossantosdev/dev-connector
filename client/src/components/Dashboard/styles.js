@@ -26,3 +26,19 @@ export const BtnCreate = styled(Link)`
   transition: opacity 0.2s ease-in;
   cursor: pointer;
 `;
+
+export const BtnWrapper = styled.div`
+  display: flex;
+  margin-top: 3rem;
+`;
+
+export const DeleteBtn = styled.button`
+  background: var(--danger-color);
+  color: #fff;
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  transition: opacity 0.2s ease-in;
+  cursor: pointer;
+`;
