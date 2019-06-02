@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Loader from '../Loader/Loader';
 import { Title, SubTitle, BtnCreate } from './styles';
 import DashboardActions from '../DasboardActions/DashboardActions';
+import Experience from '../Experience/Experience';
 
 const Dashboard = ({
   getCurrentProfile,
@@ -24,6 +25,7 @@ const Dashboard = ({
       {profile !== null ? (
         <Fragment>
           <DashboardActions />
+          <Experience experience={profile.experience} />
         </Fragment>
       ) : (
         <Fragment>
