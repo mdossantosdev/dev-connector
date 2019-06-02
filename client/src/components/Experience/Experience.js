@@ -3,8 +3,7 @@ import PropTypes from 'prop-types';
 import Moment from 'react-moment';
 import { Title, Th, Td, BtnDelete } from './styles';
 
-const Experience = ({ experience }) => {
-  console.log(experience);
+const Experience = ({ experience, deleteExperience }) => {
   const experiences = experience.map((exp) => (
     <tr key={exp._id}>
       <Td>{exp.company}</Td>
@@ -14,10 +13,11 @@ const Experience = ({ experience }) => {
         {exp.to === null ? 'Now' : <Moment format='YYYY/MM'>{exp.to}</Moment>}
       </Td>
       <Td>
-        <BtnDelete>Delete</BtnDelete>
+        <BtnDelete onClick={() => deleteExperience(exp._id)}>Delete</BtnDelete>
       </Td>
     </tr>
   ));
+
   return (
     <Fragment>
       <Title>Experience Credentials</Title>
@@ -38,6 +38,7 @@ const Experience = ({ experience }) => {
 
 Experience.propTypes = {
   experience: PropTypes.array.isRequired,
+  deleteExperience: PropTypes.func.isRequired,
 };
 
 export default Experience;
