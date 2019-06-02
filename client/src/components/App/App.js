@@ -8,6 +8,7 @@ import Alert from '../Alert';
 import Dashboard from '../Dashboard';
 import PrivateRoute from '../Routing/PrivateRoute';
 import CreateProfile from '../CreateProfile';
+import EditProfile from '../EditProfile';
 import GlobalStyle from '../../styles/globalStyles';
 import { Container } from './styles';
 
@@ -39,6 +40,7 @@ const App = () => {
               <Route exact path='/login' component={Login} />
               <PrivateRoute exact path='/dashboard' component={Dashboard} />
               <PrivateRoute exact path='/create-profile' component={CreateProfile} />
+              <PrivateRoute exact path='/edit-profile' component={EditProfile} />
             </Switch>
           </Container>
         </Fragment>
