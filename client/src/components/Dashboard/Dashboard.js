@@ -4,6 +4,7 @@ import Loader from '../Loader/Loader';
 import { Title, SubTitle, BtnCreate } from './styles';
 import DashboardActions from '../DasboardActions/DashboardActions';
 import Experience from '../Experience/Experience';
+import Education from '../Education/Education';
 
 const Dashboard = ({
   getCurrentProfile,
@@ -26,6 +27,7 @@ const Dashboard = ({
         <Fragment>
           <DashboardActions />
           <Experience experience={profile.experience} />
+          <Education education={profile.education} />
         </Fragment>
       ) : (
         <Fragment>
