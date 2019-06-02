@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Moment from 'react-moment';
 import { Title, Td, Th, BtnDelete } from './styles';
 
-const Education = ({ education }) => {
+const Education = ({ education, deleteEducation }) => {
   const educations = education.map((edu) => (
     <tr key={edu._id}>
       <Td>{edu.school}</Td>
@@ -13,7 +13,7 @@ const Education = ({ education }) => {
         {edu.to === null ? 'Now' : <Moment format='YYYY/MM'>{edu.to}</Moment>}
       </Td>
       <Td>
-        <BtnDelete>Delete</BtnDelete>
+        <BtnDelete onClick={() => deleteEducation(edu._id)}>Delete</BtnDelete>
       </Td>
     </tr>
   ));
@@ -38,6 +38,7 @@ const Education = ({ education }) => {
 
 Education.propTypes = {
   education: PropTypes.array.isRequired,
+  deleteEducation: PropTypes.func.isRequired,
 };
 
 export default Education;

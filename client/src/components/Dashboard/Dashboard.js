@@ -4,7 +4,7 @@ import Loader from '../Loader/Loader';
 import { Title, SubTitle, BtnCreate } from './styles';
 import DashboardActions from '../DasboardActions/DashboardActions';
 import Experience from '../Experience';
-import Education from '../Education/Education';
+import Education from '../Education';
 
 const Dashboard = ({
   getCurrentProfile,
