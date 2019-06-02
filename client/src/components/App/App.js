@@ -10,6 +10,7 @@ import PrivateRoute from '../Routing/PrivateRoute';
 import CreateProfile from '../CreateProfile';
 import EditProfile from '../EditProfile';
 import AddExperience from '../AddExperience';
+import AddEducation from '../AddEducation';
 import GlobalStyle from '../../styles/globalStyles';
 import { Container } from './styles';
 
@@ -43,6 +44,7 @@ const App = () => {
               <PrivateRoute exact path='/create-profile' component={CreateProfile} />
               <PrivateRoute exact path='/edit-profile' component={EditProfile} />
               <PrivateRoute exact path='/add-experience' component={AddExperience} />
+              <PrivateRoute exact path='/add-education' component={AddEducation} />
             </Switch>
           </Container>
         </Fragment>

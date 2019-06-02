@@ -11,18 +11,18 @@ import {
   BtnGoBack,
 } from './styles';
 
-const AddExperience = ({ addExperience, history }) => {
+const AddEducation = ({ addEducation, history }) => {
   const [formData, setFormData] = useState({
-    title: '',
-    company: '',
-    location: '',
+    school: '',
+    degree: '',
+    fieldofstudy: '',
     from: '',
     to: '',
     current: false,
     description: '',
   });
 
-  const { title, company, location, from, to, current, description } = formData;
+  const { school, degree, fieldofstudy, from, to, current, description } = formData;
 
   const onChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -30,42 +30,42 @@ const AddExperience = ({ addExperience, history }) => {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    addExperience(formData, history);
+    addEducation(formData, history);
   };
 
   return (
     <Fragment>
-      <Title>Add An Experience</Title>
+      <Title>Add Your Education</Title>
       <SubTitle>
-        <i className='fas fa-code-branch' /> Add any developper positions that you
-        have had in the past
+        <i className='fas fa-code-branch' /> Add any school or bootcamp that you have
+        attended
       </SubTitle>
       <small>* = required field</small>
       <form onSubmit={onSubmit}>
         <FormGroup>
           <FormInput
             type='text'
-            placeholder='* Job Title'
-            name='title'
-            value={title}
+            placeholder='* School or Bootcamp'
+            name='school'
+            value={school}
             onChange={onChange}
           />
         </FormGroup>
         <FormGroup>
           <FormInput
             type='text'
-            placeholder='* Company'
-            name='company'
-            value={company}
+            placeholder='* Degree or Certificate'
+            name='degree'
+            value={degree}
             onChange={onChange}
           />
         </FormGroup>
         <FormGroup>
           <FormInput
             type='text'
-            placeholder='Location'
-            name='location'
-            value={location}
+            placeholder='Field of Study'
+            name='fieldofstudy'
+            value={fieldofstudy}
             onChange={onChange}
           />
         </FormGroup>
@@ -82,7 +82,7 @@ const AddExperience = ({ addExperience, history }) => {
               value={current}
               onChange={() => setFormData({ ...formData, current: !current })}
             />{' '}
-            Current Job
+            Current School or Bootcamp
           </p>
         </FormGroup>
         <FormGroup>
@@ -100,7 +100,7 @@ const AddExperience = ({ addExperience, history }) => {
             name='description'
             cols='30'
             rows='5'
-            placeholder='Job Description'
+            placeholder='Program Description'
             value={description}
             onChange={onChange}
           />
@@ -114,8 +114,8 @@ const AddExperience = ({ addExperience, history }) => {
   );
 };
 
-AddExperience.propTypes = {
-  addExperience: PropTypes.func.isRequired,
+AddEducation.propTypes = {
+  addEducation: PropTypes.func.isRequired,
 };
 
-export default AddExperience;
+export default AddEducation;
