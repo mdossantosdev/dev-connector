@@ -5,6 +5,7 @@ import ProfileTop from '../ProfileTop/ProfileTop';
 import ProfileAbout from '../ProfileAbout/ProfileAbout';
 import ProfileExperience from '../ProfileExperience/ProfileExperience';
 import ProfileEducation from '../ProfileEducation/ProfileEducation';
+import ProfileGithub from '../ProfileGithub';
 import {
   BtnBack,
   BtnEdit,
@@ -63,6 +64,10 @@ const Profile = ({ getProfileById, profile: { profile, loading }, auth, match })
                 <h4>No education credentials</h4>
               )}
             </EducationWrapper>
+
+            {profile.githubusername && (
+              <ProfileGithub username={profile.githubusername} />
+            )}
           </Grid>
         </Fragment>
       )}
