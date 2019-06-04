@@ -56,6 +56,24 @@ export const ExperienceWrapper = styled.div`
   }
 `;
 
+export const EducationWrapper = styled.div`
+  grid-area: edu;
+  background: #fff;
+  color: #333;
+  border: #ccc solid 1px;
+  padding: 2rem;
+
+  & > div {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: #ccc 1px dotted;
+  }
+
+  & > div:last-child {
+    border: none;
+  }
+`;
+
 export const Title = styled.h2`
   color: var(--primary-color);
   margin-bottom: 1rem;

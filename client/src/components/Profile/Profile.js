@@ -4,7 +4,15 @@ import Loader from '../Loader/Loader';
 import ProfileTop from '../ProfileTop/ProfileTop';
 import ProfileAbout from '../ProfileAbout/ProfileAbout';
 import ProfileExperience from '../ProfileExperience/ProfileExperience';
-import { BtnBack, BtnEdit, Grid, ExperienceWrapper, Title } from './styles';
+import ProfileEducation from '../ProfileEducation/ProfileEducation';
+import {
+  BtnBack,
+  BtnEdit,
+  Grid,
+  ExperienceWrapper,
+  Title,
+  EducationWrapper,
+} from './styles';
 
 const Profile = ({ getProfileById, profile: { profile, loading }, auth, match }) => {
   useEffect(() => {
@@ -42,6 +50,19 @@ const Profile = ({ getProfileById, profile: { profile, loading }, auth, match })
                 <h4>No experience credentials</h4>
               )}
             </ExperienceWrapper>
+
+            <EducationWrapper>
+              <Title>Education</Title>
+              {profile.education.length > 0 ? (
+                <Fragment>
+                  {profile.education.map((education) => (
+                    <ProfileEducation key={education._id} education={education} />
+                  ))}
+                </Fragment>
+              ) : (
+                <h4>No education credentials</h4>
+              )}
+            </EducationWrapper>
           </Grid>
         </Fragment>
       )}
