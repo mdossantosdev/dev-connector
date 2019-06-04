@@ -26,3 +26,14 @@ export const BtnEdit = styled(Link)`
   transition: opacity 0.2s ease-in;
   outline: none;
 `;
+
+export const Grid = styled.div`
+  display: grid;
+  grid-template-areas:
+    'top top'
+    'about about'
+    'exp edu'
+    'github github';
+  grid-gap: 1rem;
+  margin: 1rem 0;
+`;
