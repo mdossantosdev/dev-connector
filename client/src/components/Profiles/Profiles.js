@@ -1,6 +1,7 @@
 import React, { Fragment, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import Loader from '../Loader/Loader';
+import ProfileItem from '../ProfileItem/ProfileItem';
 import { Title, SubTitle } from './styles';
 
 const Profiles = ({ getProfiles, profile: { profiles, loading } }) => {
@@ -21,7 +22,9 @@ const Profiles = ({ getProfiles, profile: { profiles, loading } }) => {
           </SubTitle>
           <div>
             {profiles.length > 0 ? (
-              console.log(profiles)
+              profiles.map((profile) => (
+                <ProfileItem key={profile._id} profile={profile} />
+              ))
             ) : (
               <h4>No profiles found...</h4>
             )}
