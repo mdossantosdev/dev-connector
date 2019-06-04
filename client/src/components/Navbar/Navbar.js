@@ -15,6 +15,9 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
   const authLinks = (
     <NavItemWrapper>
       <li>
+        <NavItem to='/profiles'>Developers</NavItem>
+      </li>
+      <li>
         <NavItem to='/dashboard'>
           <NavIcon className='fas fa-user' />
           Dashboard
@@ -32,7 +35,7 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
   const guestLinks = (
     <NavItemWrapper>
       <li>
-        <NavItem to='#!'>Developers</NavItem>
+        <NavItem to='/profiles'>Developers</NavItem>
       </li>
       <li>
         <NavItem to='/register'>Register</NavItem>
