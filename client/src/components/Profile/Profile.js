@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 import Loader from '../Loader/Loader';
 import ProfileTop from '../ProfileTop/ProfileTop';
 import ProfileAbout from '../ProfileAbout/ProfileAbout';
-import { BtnBack, BtnEdit, Grid } from './styles';
+import ProfileExperience from '../ProfileExperience/ProfileExperience';
+import { BtnBack, BtnEdit, Grid, ExperienceWrapper, Title } from './styles';
 
 const Profile = ({ getProfileById, profile: { profile, loading }, auth, match }) => {
   useEffect(() => {
@@ -26,6 +27,21 @@ const Profile = ({ getProfileById, profile: { profile, loading }, auth, match })
           <Grid>
             <ProfileTop profile={profile} />
             <ProfileAbout profile={profile} />
+            <ExperienceWrapper>
+              <Title>Experience</Title>
+              {profile.experience.length > 0 ? (
+                <Fragment>
+                  {profile.experience.map((experience) => (
+                    <ProfileExperience
+                      key={experience._id}
+                      experience={experience}
+                    />
+                  ))}
+                </Fragment>
+              ) : (
+                <h4>No experience credentials</h4>
+              )}
+            </ExperienceWrapper>
           </Grid>
         </Fragment>
       )}
