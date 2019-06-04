@@ -52,6 +52,7 @@ export const NavIcon = styled.i`
 
 export const Logout = styled.a`
   color: ${palette.dark.color};
+  cursor: pointer;
 
   &:hover {
     color: var(--primary-color);
