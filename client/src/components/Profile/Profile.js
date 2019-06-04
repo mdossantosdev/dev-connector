@@ -2,6 +2,7 @@ import React, { Fragment, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import Loader from '../Loader/Loader';
 import ProfileTop from '../ProfileTop/ProfileTop';
+import ProfileAbout from '../ProfileAbout/ProfileAbout';
 import { BtnBack, BtnEdit, Grid } from './styles';
 
 const Profile = ({ getProfileById, profile: { profile, loading }, auth, match }) => {
@@ -24,6 +25,7 @@ const Profile = ({ getProfileById, profile: { profile, loading }, auth, match })
 
           <Grid>
             <ProfileTop profile={profile} />
+            <ProfileAbout profile={profile} />
           </Grid>
         </Fragment>
       )}
