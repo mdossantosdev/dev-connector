@@ -40,7 +40,7 @@ const EditProfile = ({
   const [displaySocialInputs, setDisplaySocialInputs] = useState(false);
 
   useEffect(() => {
-    getCurrentProfile();
+    if (!profile) getCurrentProfile();
 
     setFormData({
       company: loading || !profile.company ? '' : profile.company,
