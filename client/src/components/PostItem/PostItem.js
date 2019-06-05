@@ -17,6 +17,7 @@ const PostItem = ({
   auth,
   post: { _id, text, name, avatar, user, likes, comments, date },
   addLike,
+  removeLike,
 }) => {
   return (
     <Post>
@@ -32,11 +33,11 @@ const PostItem = ({
           Posted on <Moment format='YYYY/MM/DD'>{date}</Moment>
         </PostDate>
         <BtnThumb onClick={() => addLike(_id)}>
-          <i class='fas fa-thumbs-up' />
+          <i className='fas fa-thumbs-up' />
           <span>{likes.length > 0 && <span>{likes.length}</span>}</span>
         </BtnThumb>
-        <BtnThumb>
-          <i class='fas fa-thumbs-down' />
+        <BtnThumb onClick={() => removeLike(_id)}>
+          <i className='fas fa-thumbs-down' />
         </BtnThumb>
         <BtnComment to={`/post/${_id}`}>
           Discussion{' '}
@@ -56,6 +57,7 @@ PostItem.propTypes = {
   auth: PropTypes.object.isRequired,
   post: PropTypes.object.isRequired,
   addLike: PropTypes.func.isRequired,
+  removeLike: PropTypes.func.isRequired,
 };
 
 export default PostItem;
