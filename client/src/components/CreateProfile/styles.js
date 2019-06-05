@@ -65,6 +65,10 @@ export const BtnSocial = styled.button`
   outline: none;
   transition: opacity 0.2s ease-in;
   cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
 `;
 
 export const FormGroupSocial = styled.div`

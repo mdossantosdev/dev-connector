@@ -1,6 +1,7 @@
 import React, { Fragment, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import Loader from '../Loader/Loader';
+import PostItem from '../PostItem';
 import { Title, SubTitle } from './styles';
 
 const Posts = ({ getPosts, post: { posts, loading } }) => {
@@ -16,6 +17,9 @@ const Posts = ({ getPosts, post: { posts, loading } }) => {
       <SubTitle>
         <i className='fas fa-user' /> Welcome to the community
       </SubTitle>
+      {posts.map((post) => (
+        <PostItem key={post._id} post={post} />
+      ))}
     </Fragment>
   );
 };
