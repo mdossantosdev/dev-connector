@@ -6,13 +6,14 @@ import Register from '../Register';
 import Login from '../Login';
 import Alert from '../Alert';
 import Dashboard from '../Dashboard';
-import PrivateRoute from '../Routing/PrivateRoute';
 import CreateProfile from '../CreateProfile';
 import EditProfile from '../EditProfile';
 import AddExperience from '../AddExperience';
 import AddEducation from '../AddEducation';
 import Profiles from '../Profiles';
 import Profile from '../Profile';
+import Posts from '../Posts';
+import PrivateRoute from '../Routing/PrivateRoute';
 import GlobalStyle from '../../styles/globalStyles';
 import { Container } from './styles';
 
@@ -49,6 +50,7 @@ const App = () => {
               <PrivateRoute exact path='/edit-profile' component={EditProfile} />
               <PrivateRoute exact path='/add-experience' component={AddExperience} />
               <PrivateRoute exact path='/add-education' component={AddEducation} />
+              <PrivateRoute exact path='/posts' component={Posts} />
             </Switch>
           </Container>
         </Fragment>

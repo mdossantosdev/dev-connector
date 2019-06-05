@@ -18,6 +18,9 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
         <NavItem to='/profiles'>Developers</NavItem>
       </li>
       <li>
+        <NavItem to='/posts'>Posts</NavItem>
+      </li>
+      <li>
         <NavItem to='/dashboard'>
           <NavIcon className='fas fa-user' />
           Dashboard
