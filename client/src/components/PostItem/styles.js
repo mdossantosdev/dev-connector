@@ -46,7 +46,6 @@ export const BtnThumb = styled.button`
 `;
 
 export const BtnComment = styled(Link)`
-  display: inline-block;
   background: var(--primary-color);
   color: #fff;
   padding: 0.4rem 1.3rem;

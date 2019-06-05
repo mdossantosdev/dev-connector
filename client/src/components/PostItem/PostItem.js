@@ -16,6 +16,7 @@ import {
 const PostItem = ({
   auth,
   post: { _id, text, name, avatar, user, likes, comments, date },
+  addLike,
 }) => {
   return (
     <Post>
@@ -30,7 +31,7 @@ const PostItem = ({
         <PostDate>
           Posted on <Moment format='YYYY/MM/DD'>{date}</Moment>
         </PostDate>
-        <BtnThumb>
+        <BtnThumb onClick={() => addLike(_id)}>
           <i class='fas fa-thumbs-up' />
           <span>{likes.length > 0 && <span>{likes.length}</span>}</span>
         </BtnThumb>
@@ -54,6 +55,7 @@ const PostItem = ({
 PostItem.propTypes = {
   auth: PropTypes.object.isRequired,
   post: PropTypes.object.isRequired,
+  addLike: PropTypes.func.isRequired,
 };
 
 export default PostItem;
