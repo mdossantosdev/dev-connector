@@ -18,6 +18,7 @@ const PostItem = ({
   post: { _id, text, name, avatar, user, likes, comments, date },
   addLike,
   removeLike,
+  deletePost,
 }) => {
   return (
     <Post>
@@ -44,7 +45,7 @@ const PostItem = ({
           {comments.length > 0 && <CommentCount>{comments.length}</CommentCount>}
         </BtnComment>
         {!auth.loading && user === auth.user._id && (
-          <BtnDelete>
+          <BtnDelete onClick={() => deletePost(_id)}>
             <i className='fas fa-times' />
           </BtnDelete>
         )}
@@ -58,6 +59,7 @@ PostItem.propTypes = {
   post: PropTypes.object.isRequired,
   addLike: PropTypes.func.isRequired,
   removeLike: PropTypes.func.isRequired,
+  deletePost: PropTypes.func.isRequired,
 };
 
 export default PostItem;
