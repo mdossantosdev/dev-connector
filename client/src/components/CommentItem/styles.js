@@ -1,0 +1,28 @@
+import styled from 'styled-components';
+
+export const Comment = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-gap: 2rem;
+  align-items: center;
+  background: #fff;
+  color: #333;
+  border: #ccc solid 1px;
+  padding: 1rem;
+  margin: 1rem 0;
+`;
+
+export const Avatar = styled.img`
+  border-radius: 50%;
+  width: 100px;
+`;
+
+export const Text = styled.p`
+  margin: 1rem 0;
+`;
+
+export const CommentDate = styled.p`
+  color: #aaa;
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+`;

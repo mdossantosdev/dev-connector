@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Loader from '../Loader/Loader';
 import PostItem from '../PostItem';
 import CommentForm from '../CommentForm';
+import CommentItem from '../CommentItem';
 import { Button } from './styles';
 
 const Post = ({ getPost, post: { post, loading }, match }) => {
@@ -17,6 +18,11 @@ const Post = ({ getPost, post: { post, loading }, match }) => {
       <Button to='/posts'>Back To Posts</Button>
       <PostItem post={post} showActions={false} />
       <CommentForm postId={post._id} />
+      <div>
+        {post.comments.map((comment) => (
+          <CommentItem key={comment._id} comment={comment} postId={post._id} />
+        ))}
+      </div>
     </Fragment>
   );
 };
