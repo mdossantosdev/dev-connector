@@ -85,7 +85,7 @@ const EditProfile = ({
 
   return (
     <Fragment>
-      <Title>Create Your Profile</Title>
+      <Title>Edit Your Profile</Title>
       <SubTitle>
         <i className='fas fa-user' /> Let's get some information to make your profile
         stand out

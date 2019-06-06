@@ -2,7 +2,7 @@ import React, { Fragment, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import Loader from '../Loader/Loader';
 import { Title, SubTitle, BtnCreate, BtnWrapper, DeleteBtn } from './styles';
-import DashboardActions from '../DasboardActions/DashboardActions';
+import DashboardActions from '../DashboardActions/DashboardActions';
 import Experience from '../Experience';
 import Education from '../Education';
 
