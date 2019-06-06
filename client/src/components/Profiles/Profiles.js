@@ -1,7 +1,7 @@
 import React, { Fragment, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import Loader from '../Loader/Loader';
-import ProfileItem from '../ProfileItem/ProfileItem';
+import Loader from '../Loader';
+import ProfileItem from '../ProfileItem';
 import { Title, SubTitle } from './styles';
 
 const Profiles = ({ getProfiles, profile: { profiles, loading } }) => {

@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
-import Loader from '../Loader/Loader';
+import Loader from '../Loader';
 import { GithubWrapper, Title, Repo, Stars, Watchers, Forks } from './styles';
 
 const ProfileGithub = ({ username, getGithubRepos, repos }) => {

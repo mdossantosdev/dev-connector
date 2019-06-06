@@ -1,10 +1,10 @@
 import React, { Fragment, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import Loader from '../Loader/Loader';
-import ProfileTop from '../ProfileTop/ProfileTop';
-import ProfileAbout from '../ProfileAbout/ProfileAbout';
-import ProfileExperience from '../ProfileExperience/ProfileExperience';
-import ProfileEducation from '../ProfileEducation/ProfileEducation';
+import Loader from '../Loader';
+import ProfileTop from '../ProfileTop';
+import ProfileAbout from '../ProfileAbout';
+import ProfileExperience from '../ProfileExperience';
+import ProfileEducation from '../ProfileEducation';
 import ProfileGithub from '../ProfileGithub';
 import {
   BtnBack,

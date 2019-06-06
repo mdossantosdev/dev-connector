@@ -1,8 +1,8 @@
 import React, { Fragment, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import Loader from '../Loader/Loader';
+import Loader from '../Loader';
 import { Title, SubTitle, BtnCreate, BtnWrapper, DeleteBtn } from './styles';
-import DashboardActions from '../DashboardActions/DashboardActions';
+import DashboardActions from '../DashboardActions';
 import Experience from '../Experience';
 import Education from '../Education';
 

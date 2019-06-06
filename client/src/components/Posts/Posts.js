@@ -1,6 +1,6 @@
 import React, { Fragment, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import Loader from '../Loader/Loader';
+import Loader from '../Loader';
 import PostItem from '../PostItem';
 import PostForm from '../PostForm';
 import { Title, SubTitle } from './styles';
