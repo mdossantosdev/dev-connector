@@ -1,10 +1,6 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-export const BtnWrapper = styled.div`
-  display: flex;
-`;
-
 export const DashBtn = styled(Link)`
   background: var(--light-color);
   color: #333;
@@ -15,6 +11,16 @@ export const DashBtn = styled(Link)`
   transition: opacity 0.2s ease-in;
   outline: none;
   cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  @media only screen and (max-width: 700px) {
+    display: block;
+    width: 100%;
+    margin-bottom: 0.3rem;
+  }
 `;
 
 export const IconBtn = styled.i`

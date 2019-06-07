@@ -10,11 +10,25 @@ export const Card = styled.div`
   line-height: 1.8;
   margin-bottom: 1rem;
   background: var(--light-color);
+
+  @media only screen and (max-width: 700px) {
+    grid-template-columns: 1fr;
+    text-align: center;
+
+    & > ul {
+      display: none;
+    }
+  }
 `;
 
 export const Avatar = styled.img`
   width: 100%;
   border-radius: 50%;
+
+  @media only screen and (max-width: 700px) {
+    width: 150px;
+    margin: auto;
+  }
 `;
 
 export const BtnProfile = styled(Link)`
@@ -28,6 +42,10 @@ export const BtnProfile = styled(Link)`
   margin-right: 0.5rem;
   transition: opacity 0.2s ease-in;
   outline: none;
+
+  &:hover {
+    opacity: 0.8;
+  }
 `;
 
 export const Item = styled.li`

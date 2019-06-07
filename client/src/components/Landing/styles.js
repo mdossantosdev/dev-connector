@@ -34,11 +34,19 @@ export const Title = styled.h1`
   font-size: 4rem;
   line-height: 1.2;
   margin-bottom: 1rem;
+
+  @media only screen and (max-width: 700px) {
+    font-size: 3rem;
+  }
 `;
 
 export const Text = styled.p`
   font-size: 1.5rem;
   margin-bottom: 1rem;
+
+  @media only screen and (max-width: 700px) {
+    font-size: 1rem;
+  }
 `;
 
 export const BtnWrapper = styled.div`

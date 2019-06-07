@@ -8,6 +8,7 @@ import {
   NavItemWrapper,
   NavItem,
   NavIcon,
+  HideText,
   Logout,
 } from './styles';
 
@@ -23,13 +24,13 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
       <li>
         <NavItem to='/dashboard'>
           <NavIcon className='fas fa-user' />
-          Dashboard
+          <HideText>Dashboard</HideText>
         </NavItem>
       </li>
       <li>
         <Logout onClick={logout}>
           <NavIcon className='fas fa-sign-out-alt' />
-          Logout
+          <HideText>Logout</HideText>
         </Logout>
       </li>
     </NavItemWrapper>

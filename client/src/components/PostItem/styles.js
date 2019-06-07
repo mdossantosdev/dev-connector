@@ -11,6 +11,10 @@ export const Post = styled.div`
   border: #ccc solid 1px;
   padding: 1rem;
   margin: 1rem 0;
+
+  @media only screen and (max-width: 700px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 export const Avatar = styled.img`
@@ -43,6 +47,10 @@ export const BtnThumb = styled.button`
   &:hover {
     opacity: 0.8;
   }
+
+  @media only screen and (max-width: 700px) {
+    padding: 0.3rem 0.4rem;
+  }
 `;
 
 export const BtnComment = styled(Link)`
@@ -58,6 +66,10 @@ export const BtnComment = styled(Link)`
 
   &:hover {
     opacity: 0.8;
+  }
+
+  @media only screen and (max-width: 700px) {
+    padding: 0.3rem 0.4rem;
   }
 `;
 
@@ -83,5 +95,9 @@ export const BtnDelete = styled.button`
 
   &:hover {
     opacity: 0.8;
+  }
+
+  @media only screen and (max-width: 700px) {
+    padding: 0.3rem 0.4rem;
   }
 `;

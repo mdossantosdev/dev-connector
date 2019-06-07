@@ -23,6 +23,10 @@ export const Skills = styled.div`
   align-items: center;
   justify-content: center;
   text-align: center;
+
+  @media only screen and (max-width: 700px) {
+    flex-direction: column;
+  }
 `;
 
 export const Skill = styled.div`

@@ -1,9 +1,9 @@
 import React from 'react';
-import { BtnWrapper, DashBtn, IconBtn } from './styles';
+import { DashBtn, IconBtn } from './styles';
 
 const DashboardActions = () => {
   return (
-    <BtnWrapper>
+    <div>
       <DashBtn to='/edit-profile'>
         <IconBtn className='fas fa-user-circle' /> Edit Profile
       </DashBtn>
@@ -13,7 +13,7 @@ const DashboardActions = () => {
       <DashBtn to='/add-education'>
         <IconBtn className='fas fa-graduation-cap' /> Add Education
       </DashBtn>
-    </BtnWrapper>
+    </div>
   );
 };
 

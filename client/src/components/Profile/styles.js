@@ -12,6 +12,10 @@ export const BtnBack = styled(Link)`
   margin-right: 0.5rem;
   transition: opacity 0.2s ease-in;
   outline: none;
+
+  &:hover {
+    opacity: 0.8;
+  }
 `;
 
 export const BtnEdit = styled(Link)`
@@ -25,6 +29,10 @@ export const BtnEdit = styled(Link)`
   margin-right: 0.5rem;
   transition: opacity 0.2s ease-in;
   outline: none;
+
+  &:hover {
+    opacity: 0.8;
+  }
 `;
 
 export const Grid = styled.div`
@@ -36,6 +44,15 @@ export const Grid = styled.div`
     'github github';
   grid-gap: 1rem;
   margin: 1rem 0;
+
+  @media only screen and (max-width: 700px) {
+    grid-template-areas:
+      'top'
+      'about'
+      'exp'
+      'edu'
+      'github';
+  }
 `;
 
 export const ExperienceWrapper = styled.div`

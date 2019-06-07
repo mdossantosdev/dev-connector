@@ -14,11 +14,24 @@ export const Nav = styled.nav`
   top: 0;
   border-bottom: solid 1px var(--primary-color);
   opacity: 0.9;
+
+  @media only screen and (max-width: 700px) {
+    display: block;
+    text-align: center;
+  }
 `;
 
 export const NavSection = styled.div`
   display: flex;
   align-items: center;
+
+  @media only screen and (max-width: 700px) {
+    justify-content: center;
+
+    &:first-child {
+      margin-bottom: 0.5rem;
+    }
+  }
 `;
 
 export const Title = styled.h1`
@@ -48,6 +61,12 @@ export const NavItem = styled(Link)`
 
 export const NavIcon = styled.i`
   margin-right: 0.3rem;
+`;
+
+export const HideText = styled.span`
+  @media only screen and (max-width: 700px) {
+    display: none;
+  }
 `;
 
 export const Logout = styled.a`

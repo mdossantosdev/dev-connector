@@ -8,11 +8,23 @@ export const Th = styled.th`
   padding: 1rem;
   text-align: left;
   background: var(--light-color);
+
+  @media only screen and (max-width: 700px) {
+    &:nth-child(2) {
+      display: none;
+    }
+  }
 `;
 
 export const Td = styled.td`
   padding: 1rem;
   text-align: left;
+
+  @media only screen and (max-width: 700px) {
+    &:nth-child(2) {
+      display: none;
+    }
+  }
 `;
 
 export const BtnDelete = styled.button`
@@ -26,4 +38,8 @@ export const BtnDelete = styled.button`
   margin-right: 0.5rem;
   transition: opacity 0.2s ease-in;
   outline: none;
+
+  &:hover {
+    opacity: 0.8;
+  }
 `;
