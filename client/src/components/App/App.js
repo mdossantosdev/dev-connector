@@ -14,6 +14,7 @@ import Profiles from '../Profiles';
 import Profile from '../Profile';
 import Posts from '../Posts';
 import Post from '../Post';
+import NotFound from '../NotFound';
 import PrivateRoute from '../Routing/PrivateRoute';
 import GlobalStyle from '../../styles/globalStyles';
 import { Container } from './styles';
@@ -53,6 +54,7 @@ const App = () => {
               <PrivateRoute exact path='/add-education' component={AddEducation} />
               <PrivateRoute exact path='/posts' component={Posts} />
               <PrivateRoute exact path='/posts/:id' component={Post} />
+              <Route component={NotFound} />
             </Switch>
           </Container>
         </Fragment>
